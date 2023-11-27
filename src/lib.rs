@@ -11,7 +11,7 @@ use shuttle_service::{
 
 pub use diesel_async;
 
-const MAX_POOL_SIZE: usize = 5;
+pub const MAX_POOL_SIZE: usize = 5;
 
 #[derive(Default, Serialize)]
 pub struct Postgres {
