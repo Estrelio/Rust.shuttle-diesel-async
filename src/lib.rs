@@ -1,15 +1,14 @@
 use async_trait::async_trait;
 use diesel_async::{
-    pooled_connection::{deadpool::Pool, AsyncDieselConnectionManager},
     AsyncPgConnection,
+    pooled_connection::{AsyncDieselConnectionManager, deadpool::Pool},
 };
+pub use diesel_async;
 use serde::Serialize;
 use shuttle_service::{
     database::{SharedEngine, Type as DatabaseType},
     DbInput, DbOutput, Factory, ResourceBuilder, Type,
 };
-
-pub use diesel_async;
 
 pub const MAX_POOL_SIZE: usize = 5;
 
